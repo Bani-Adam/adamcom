@@ -15,6 +15,26 @@
     
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>   
+
+    <style>
+    .google-maps {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+    }
+    .google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+        .mybuttonWA{margin:0;padding:0;text-align:center;position:fixed;bottom:35px;right:45px}
+        .buttonWA{font-size:17px;color:#f0e2dd;background:#1fe76e;padding:10px;margin:0;overflow:hidden;border-radius:3px;text-decoration:none}
+        .mybuttonWA .buttonWA:hover{background:#62abd0}
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
     <header class="site-header">
@@ -61,8 +81,9 @@
             </div>
         </div>
     </div>
-    <center><h3>MAP</h3><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d992.9561988311317!2d105.26070056948792!3d-5.443554164601452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40dbcbd90248d9%3A0x6e32ab749381b6ea!2sBaniadam_House!5e0!3m2!1sid!2sid!4v1690962847845!5m2!1sid!2sid" 
-    width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <center><h3>MAP</h3><div class="google-maps">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.82482181647!2d105.25876937376893!3d-5.443550154299023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40dbcbd90248d9%3A0x6e32ab749381b6ea!2sBaniadam_House!5e0!3m2!1sid!2sid!4v1691045944975!5m2!1sid!2sid" 
+        width="900" height="900" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     </center>    
 
     <footer class="site-footer">
@@ -102,5 +123,23 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "+6285709160075", // WhatsApp number
+                call_to_action: "Chat Whatsapp", // Call to action
+                position: "right", // Position may be 'right' or 'left'
+            };
+            var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+        })();
+    </script>
+    
+    <div class="mybuttonWA">
+        <a class="buttonWA" href="https://api.whatsapp.com/send?phone=6285709160075&amp;text=Kalau%20mau%20servis%20HP%20dan%20laptop%20bisa%20langsung%20chat%20disini%20ya%20kak" 
+        rel="nofollow" target="_blank"><i class="fa fa-whatsapp"> </i> WhatsApp</a></div>
 </body>
 </html>
